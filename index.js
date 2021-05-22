@@ -7,7 +7,7 @@ const format = time.timeFormat('%d/%m/%y %I:%M%p')
 const _ = require('lodash');
 
 const url = 'https://goaonline.gov.in/beds'
-const data = io.readDataSync('data/combined-data.csv')
+let data = io.readDataSync('data/combined-data.csv')
 
 request(url, async function (err, response, body) {
 	    if (!err && response.statusCode == 200){
